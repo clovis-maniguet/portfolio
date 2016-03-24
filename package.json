@@ -4,7 +4,7 @@
   "description": "My new portfolio version",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm install && bower install && gulp"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,11 @@
     "handlebars": "^4.0.5"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-declare": "^0.3.0",
     "gulp-handlebars": "^4.0.0",
+    "gulp-sass": "^2.2.0",
     "gulp-wrap": "^0.11.0"
   }
 }

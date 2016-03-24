@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My new portfolio version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clovis-maniguet/portfolio.git"
+  },
+  "author": "Clovis Maniguet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clovis-maniguet/portfolio/issues"
+  },
+  "homepage": "https://github.com/clovis-maniguet/portfolio#readme",
+  "dependencies": {
+    "crossroads": "^0.12.2",
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-wrap": "^0.11.0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+	"home": {
+		"title": "Clovis Maniguet",
+		"profile": {
+            "word1": ["Junior", "Hetic", "Back", "Front"],
+            "word2": "Developper"
+        }
+	},
+    "works": {
+        "studentCheck": {
+            "textes": {
+                "title": "Student Check",
+                "content": "fzfpzeivjozievj zefihzi eofzofi efioz",
+                "jobs": "@BackDeveloper",
+                "tools": "#Symfony #PHP #MySQL"
+            },
+            "images": {
+                "background": "./img/studentCheck/studentCheckBg.jpg",
+                "laptop1": "./img/studentCheck/studentCheckLaptop1.png",
+                "laptop2": "./img/studentCheck/studentCheckLaptop2.png",
+                "pattern": "./img/studentCheck/studentCheckPattern.jpg"
+            }
+        }
+    },
+    "contact": {
+        "textes": {
+            "mail": "clovis.maniguet@hetic.net",
+            "github": "/clovis-maniguet",
+            "twitter": "@clovismaniguet",
+            "linkedIn": "linkedIn",
+            "copyrights": "Clovis Maniguet © 2016 Tous droits réservés"
+        },
+        "images": {
+            "mail": "./img/social/mail.svg",
+            "github": "./img/social/github.svg",
+            "twitter": "./img/social/twitter.svg",
+            "linkedIn": "./img/social/linkedIn.svg"
+        }
+    }
+}

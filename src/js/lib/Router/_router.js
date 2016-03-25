@@ -1,25 +1,32 @@
-$(function(){
+// Routing file
+
+// Route : /
+// Page  : home
+crossroads.addRoute('/', function(){
     
-    app = new App();
+    // Check if a page is loaded
+    if ( app.currentPage != null ) app.currentPage.hide();
 
-	crossroads.addRoute('/', function(){
-		
-		if ( app.currentPage != null ) app.currentPage.hide();
+    // We show the home page
+    app.pages.home.show();
 
-		app.pages.home.show();
+    // Save the page as currentPage
+    app.currentPage = app.pages.home;
 
-		app.currentPage = app.pages.home;
-
-	});
-
-	crossroads.addRoute('/student-check', function(){
-
-		if ( app.currentPage != null ) app.currentPage.hide();
-
-		app.pages.theMovie.show();
-
-		app.currentPage = app.pages.theMovie;
-
-	});
-    
 });
+
+
+// // Route : /student-check
+// // Page  : studentCheck
+// crossroads.addRoute('/student-check', function(){
+
+//     // Check if a page is loaded
+//     if ( app.currentPage != null ) app.currentPage.hide();
+
+//     // We show the studentCheck page
+//     app.pages.works.studentCheck.show();
+
+//     // Save the page as currentPage
+//     app.currentPage = app.pages.works.studentCheck;
+
+// });

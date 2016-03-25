@@ -13,7 +13,7 @@ var app = function(){
 }
 
 // Initialization
-app.prototype.init = funtion(){
+app.prototype.init = function(){
     
     // Initialization Home page
     this.pages.home = new home();

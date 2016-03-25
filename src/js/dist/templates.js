@@ -8,7 +8,7 @@ this["templates"]["home"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"
   return "<div class=\"entry\">\r\n  <h1>"
     + alias1(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
     + "</h1>\r\n  <hr>\r\n  <h2><span>"
-    + alias1(alias2(((stack1 = (depth0 != null ? depth0.profile : depth0)) != null ? stack1.word1 : stack1), depth0))
+    + alias1(alias2(((stack1 = ((stack1 = (depth0 != null ? depth0.profile : depth0)) != null ? stack1.word1 : stack1)) != null ? stack1['0'] : stack1), depth0))
     + "</span> "
     + alias1(alias2(((stack1 = (depth0 != null ? depth0.profile : depth0)) != null ? stack1.word2 : stack1), depth0))
     + "</h2>\r\n</div>";

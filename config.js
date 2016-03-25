@@ -15,7 +15,7 @@ module.exports = {
 	},
 	templates: {
 		hbs: './src/templates/**/*.hbs',
-        namespace: 'portfolio.templates',
+        namespace: 'templates',
 		dist:'./src/js/dist/'
 	},
 	files: {

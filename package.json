@@ -19,7 +19,7 @@
   "dependencies": {
     "crossroads": "^0.12.2",
     "gsap": "^1.18.2",
-    "handlebars": "^4.0.5"
+    "handlebars": "^3.0.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

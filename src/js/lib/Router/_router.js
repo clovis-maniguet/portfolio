@@ -16,17 +16,17 @@ crossroads.addRoute('/', function(){
 });
 
 
-// // Route : /student-check
-// // Page  : studentCheck
-// crossroads.addRoute('/student-check', function(){
+// Route : /student-check
+// Page  : studentCheck
+crossroads.addRoute('/student-check', function(){
 
-//     // Check if a page is loaded
-//     if ( app.currentPage != null ) app.currentPage.hide();
+    // Check if a page is loaded
+    if ( app.currentPage != null ) app.currentPage.hide();
 
-//     // We show the studentCheck page
-//     app.pages.works.studentCheck.show();
+    // We show the studentCheck page
+    app.pages.works.studentCheck.show();
 
-//     // Save the page as currentPage
-//     app.currentPage = app.pages.works.studentCheck;
+    // Save the page as currentPage
+    app.currentPage = app.pages.works.studentCheck;
 
-// });
+});

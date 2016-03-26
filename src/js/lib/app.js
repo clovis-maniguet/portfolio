@@ -6,6 +6,9 @@ var app = function(){
 
     // Current page null 
 	this.currentPage = null;
+    
+    // Data of the application
+    this.data = {};
 
 	// Initialization
 	this.init();
@@ -19,7 +22,7 @@ app.prototype.init = function(){
     this.pages.home = new home();
     
     // Initialization works pages
-    // this.pages.works.studentCheck = new work();
+    this.pages.works.studentCheck = new work();
     
     // this.pages.works.gen = new work();
     
@@ -33,3 +36,14 @@ app.prototype.init = function(){
     // this.pages.contact = new contact();
     
 }
+
+
+$(function(){
+    
+    $.getJSON( this.url , function( data ) {
+        
+        myApp.data = data;
+        
+    });
+    
+});

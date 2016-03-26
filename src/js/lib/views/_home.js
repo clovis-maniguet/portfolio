@@ -2,11 +2,9 @@ var home = function(){
     
     this.id = 'home';
     
-    this.data = {};
+    this.domElmt = $('#' + this.id);
     
     this.template = {};
-    
-    this.url = '../../assets/data.json';
     
     this.init();
     
@@ -14,19 +12,35 @@ var home = function(){
 
 home.prototype.init = function(){
     
-     $.getJSON( this.url , function( data ) {
+    console.log(myApp);
+    
+    if(myApp.data != undefined){
+        this.template = templates.home(myApp.data.home);
         
-        self.data = data;
+     $('body').html(this.template);
+    }else{
+         $.getJSON( this.url , function( data ) {
         
-        self.template = templates.home(self.data.home);
+        myApp.data = data;
         
-        $('body').html(self.template);
+        his.template = templates.home(myApp.data.home);
         
-        console.log(self.data);
+     $('body').html(this.template);
         
     });
+    }
+   
     
 }
 
-// var loader = new loader();
-var app = new app();
+home.prototype.hide = function(){
+    
+    TweenMax.to(this.domElmt, 2, {display: none});
+    
+}
+
+home.prototype.show = function(){
+    
+    TweenMax.to(this.domElmt, 2, {display: show});
+    
+}

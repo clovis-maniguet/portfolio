@@ -1,0 +1,8 @@
+#home{
+        
+    background: url('../img/homeBg.png') no-repeat center fixed;
+    @include background-size(cover);
+    
+    color: $color3;
+    
+}

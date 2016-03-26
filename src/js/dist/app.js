@@ -6,6 +6,9 @@ var app = function(){
 
     // Current page null 
 	this.currentPage = null;
+    
+    // Data of the application
+    this.data = {};
 
 	// Initialization
 	this.init();
@@ -19,7 +22,7 @@ app.prototype.init = function(){
     this.pages.home = new home();
     
     // Initialization works pages
-    // this.pages.works.studentCheck = new work();
+    this.pages.works.studentCheck = new work();
     
     // this.pages.works.gen = new work();
     
@@ -33,35 +36,17 @@ app.prototype.init = function(){
     // this.pages.contact = new contact();
     
 }
-var loader = function(){
-    
-    this.data = {};
-    
-    this.url = '../../assets/data.json';
-    
-    this.init();
-    
-}
 
-loader.prototype.init = function(){
-    
-    this.load();
-    
-}
 
-loader.prototype.load = function(){
-    
-    var self = this;
+$(function(){
     
     $.getJSON( this.url , function( data ) {
         
-        self.data = data;
-        
-        
+        myApp.data = data;
         
     });
     
-}
+});
 // Routing file
 
 // Route : /
@@ -80,30 +65,28 @@ crossroads.addRoute('/', function(){
 });
 
 
-// // Route : /student-check
-// // Page  : studentCheck
-// crossroads.addRoute('/student-check', function(){
+// Route : /student-check
+// Page  : studentCheck
+crossroads.addRoute('/student-check', function(){
 
-//     // Check if a page is loaded
-//     if ( app.currentPage != null ) app.currentPage.hide();
+    // Check if a page is loaded
+    if ( app.currentPage != null ) app.currentPage.hide();
 
-//     // We show the studentCheck page
-//     app.pages.works.studentCheck.show();
+    // We show the studentCheck page
+    app.pages.works.studentCheck.show();
 
-//     // Save the page as currentPage
-//     app.currentPage = app.pages.works.studentCheck;
+    // Save the page as currentPage
+    app.currentPage = app.pages.works.studentCheck;
 
-// });
+});
 
 var home = function(){
     
     this.id = 'home';
     
-    this.data = {};
+    this.domElmt = $('#' + this.id);
     
     this.template = {};
-    
-    this.url = '../../assets/data.json';
     
     this.init();
     
@@ -111,19 +94,68 @@ var home = function(){
 
 home.prototype.init = function(){
     
-     $.getJSON( this.url , function( data ) {
+    console.log(myApp);
+    
+    if(myApp.data != undefined){
+        this.template = templates.home(myApp.data.home);
         
-        self.data = data;
+     $('body').html(this.template);
+    }else{
+         $.getJSON( this.url , function( data ) {
         
-        self.template = templates.home(self.data.home);
+        myApp.data = data;
         
-        $('body').html(self.template);
+        his.template = templates.home(myApp.data.home);
         
-        console.log(self.data);
+     $('body').html(this.template);
         
     });
+    }
+   
     
 }
 
-// var loader = new loader();
-var app = new app();
+home.prototype.hide = function(){
+    
+    TweenMax.to(this.domElmt, 2, {display: none});
+    
+}
+
+home.prototype.show = function(){
+    
+    TweenMax.to(this.domElmt, 2, {display: show});
+    
+}
+var work = function(id){
+    
+    this.id = id;
+    
+    this.domElmt = $('#' + this.id);
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+work.prototype.init = function(){
+    
+     this.template = templates.work(myApp.data.works.this.id);
+        
+     $('body').html(this.template);
+    
+}
+
+work.prototype.hide = function(){
+    
+    TweenMax.to(this.domElmt, 2, {display: none});
+    
+}
+
+work.prototype.show = function(){
+    
+    TweenMax.to(this.domElmt, 2, {display: show});
+    
+}
+
+var myApp = new app();

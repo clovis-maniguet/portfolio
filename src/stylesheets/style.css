@@ -5837,7 +5837,7 @@ button.close {
   color: #fefefe; }
 
 .home {
-  background: url("../img/homeBg.png") no-repeat center fixed;
+  background: url("../img/homeBg.png") no-repeat center;
   -webkit-background-size: cover;
   -khtml-background-size: cover;
   -moz-background-size: cover;

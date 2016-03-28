@@ -1,6 +1,28 @@
 this["templates"] = this["templates"] || {};
 this["templates"]["contact"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"entry\">\r\n  <h1>contact</h1>\r\n  <div class=\"body\">\r\n<p>body</p>\r\n  </div>\r\n</div>";
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "<div class=\"contact view\">\r\n    \r\n    <div class=\"container\">\r\n        \r\n        <h2>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.title : stack1), depth0))
+    + "</h2>\r\n        \r\n        <div class=\"social\">\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.mail : stack1), depth0))
+    + "\">\r\n                \r\n                <span>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.mail : stack1), depth0))
+    + "</span>\r\n                \r\n            </div>\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.github : stack1), depth0))
+    + "\">\r\n                \r\n                <span>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.github : stack1), depth0))
+    + "</span>\r\n                \r\n            </div>\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.twitter : stack1), depth0))
+    + "\">\r\n                \r\n                <span>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.twitter : stack1), depth0))
+    + "</span>\r\n                \r\n            </div>\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.linkedIn : stack1), depth0))
+    + "\">\r\n                \r\n                <span>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.linkedIn : stack1), depth0))
+    + "</span>\r\n                \r\n            </div>\r\n            \r\n        </div>\r\n        \r\n        <p>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.copyrights : stack1), depth0))
+    + "</p>\r\n        \r\n    </div>\r\n    \r\n</div>";
 },"useData":true});
 this["templates"]["home"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=this.escapeExpression, alias2=this.lambda;
@@ -14,9 +36,25 @@ this["templates"]["home"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"
     + "</h2>\r\n  </div>\r\n</div>";
 },"useData":true});
 this["templates"]["work"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1;
+    var stack1, helper, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "<div class=\"work view\">\r\n  <h1>"
-    + this.escapeExpression(this.lambda(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.title : stack1), depth0))
-    + "</h1>\r\n  <div class=\"body\">\r\n    <p>body</p>\r\n  </div>\r\n</div>";
+  return "<div class=\"work view\">\r\n    \r\n   <div class=\"left-side\">\r\n       <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.background : stack1), depth0))
+    + "\" class=\"workBg\">\r\n       <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.laptop1 : stack1), depth0))
+    + "\" class=\"workLaptop1\">\r\n       <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.laptop2 : stack1), depth0))
+    + "\" class=\"workLaptop2\">\r\n   </div>\r\n    \r\n    <div class=\"right-side\">\r\n        \r\n        <h2>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.title : stack1), depth0))
+    + "</h2>\r\n        \r\n        <p>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.content : stack1), depth0))
+    + "</p>\r\n        \r\n        <a href=\""
+    + alias2(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\">More</a>\r\n        \r\n        <p>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.jobs : stack1), depth0))
+    + "</p>\r\n        <p>"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.tools : stack1), depth0))
+    + "</p>\r\n        \r\n    </div>\r\n    \r\n    <div class=\"pattern\">\r\n        <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.pattern : stack1), depth0))
+    + "\">\r\n    </div>\r\n    \r\n</div>";
 },"useData":true});

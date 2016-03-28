@@ -11,7 +11,12 @@ ViewController.prototype.init = function(){
     this.views = {
         
         'home': new Home(),
-        'studentCheck': new Work('studentCheck')
+        'nextToSchool': new Work('nextToSchool'),
+        'gen': new Work('gen'),
+        'slimyBoy': new Work('slimyBoy'),
+        'eveningSuccess': new Work('eveningSuccess'),
+        'dailyMasterpiece': new Work('dailyMasterpiece'),
+        'contact': new Contact()
         
     }
     

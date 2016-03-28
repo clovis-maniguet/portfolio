@@ -54,6 +54,41 @@ App.prototype.onDatasLoaded = function() {
 	this.viewController = new ViewController();
 
 };
+var ViewController = function(){
+    
+    this.views = {};
+    
+    this.init();
+    
+}
+
+ViewController.prototype.init = function(){
+    
+    this.views = {
+        
+        'home': new Home(),
+        'nextToSchool': new Work('nextToSchool'),
+        'gen': new Work('gen'),
+        'slimyBoy': new Work('slimyBoy'),
+        'eveningSuccess': new Work('eveningSuccess'),
+        'dailyMasterpiece': new Work('dailyMasterpiece'),
+        'contact': new Contact()
+        
+    }
+    
+    this.pushViews();
+    
+}
+
+ViewController.prototype.pushViews = function(){
+   
+    for(var view in this.views) { 
+        
+        $('#main').append(this.views[view].template);
+       
+    }
+    
+}
 var Router = function(){
 
 	// Create navigate event
@@ -148,34 +183,23 @@ Router.prototype.getToken = function() {
 	}
 
 };
-var ViewController = function(){
+var Contact = function(){
     
-    this.views = {};
+    this.id = 'contact';
+    
+    this.dataPath = app.datas[this.id];
+    
+    this.template = {};
     
     this.init();
     
 }
 
-ViewController.prototype.init = function(){
-    
-    this.views = {
-        
-        'home': new Home(),
-        'studentCheck': new Work('studentCheck')
-        
-    }
-    
-    this.pushViews();
-    
-}
+Contact.prototype.init = function(){
 
-ViewController.prototype.pushViews = function(){
-   
-    for(var view in this.views) { 
-        
-        $('#main').append(this.views[view].template);
-       
-    }
+
+console.log(this.dataPath);
+     this.template = templates.contact(this.dataPath);
     
 }
 

@@ -1,6 +1,6 @@
 .home{
     
-    background: url('../img/homeBg.png') no-repeat center fixed;
+    background: url('../img/homeBg.png') no-repeat center;
     @include background-size(cover);
     
     .intro{

@@ -15,12 +15,14 @@
                 "tools": "#Symfony #PHP #MySQL"
             },
             "images": {
-                "background": "./img/studentCheck/studentCheckBg.jpg",
-                "laptop1": "./img/studentCheck/studentCheckLaptop1.png",
-                "laptop2": "./img/studentCheck/studentCheckLaptop2.png",
-                "pattern": "./img/studentCheck/studentCheckPattern.jpg"
+                "background": "./img/nextToSchool/nextToSchoolBg.png",
+                "laptop1": "./img/nextToSchool/nextToSchoolLaptop1.png",
+                "laptop2": "./img/nextToSchool/nextToSchoolLaptop2.png",
+                "pattern": "./img/nextToSchool/nextToSchoolPattern.png"
             },
-            "link": "http://api.nexttoschool.com/"
+            "link": "http://api.nexttoschool.com/",
+            "idBackground": "nextToSchoolBg",
+            "idPattern": "nextToSchoolPattern"
         },
         "gen": {
             "textes": {
@@ -30,10 +32,10 @@
                 "tools": "#Invision #Tender #FrenchState"
             },
             "images": {
-                "background": "./img/gen/genBg.jpg",
+                "background": "./img/gen/genBg.png",
                 "laptop1": "./img/gen/genLaptop1.png",
                 "laptop2": "./img/gen/genLaptop2.png",
-                "pattern": "./img/gen/genPattern.jpg"
+                "pattern": "./img/gen/genPattern.png"
             },
             "link": "https://projects.invisionapp.com/share/CB4V388EN#/screens"
         },
@@ -45,10 +47,10 @@
                 "tools": "#Unity3D #Csharp #Management"
             },
             "images": {
-                "background": "./img/slimyBoy/slimyBoyBg.jpg",
+                "background": "./img/slimyBoy/slimyBoyBg.png",
                 "laptop1": "./img/slimyBoy/slimyBoyLaptop1.png",
                 "laptop2": "./img/slimyBoy/slimyBoyLaptop2.png",
-                "pattern": "./img/slimyBoy/slimyBoyPattern.jpg"
+                "pattern": "./img/slimyBoy/slimyBoyPattern.png"
             },
             "link": "http://slimyboy.clovismaniguet.fr/"
         },
@@ -60,10 +62,10 @@
                 "tools": "#Wordpress #PHP #JavaScript"
             },
             "images": {
-                "background": "./img/eveningSuccess/eveningSuccessBg.jpg",
+                "background": "./img/eveningSuccess/eveningSuccessBg.png",
                 "laptop1": "./img/eveningSuccess/eveningSuccessLaptop1.png",
                 "laptop2": "./img/eveningSuccess/eveningSuccessLaptop2.png",
-                "pattern": "./img/eveningSuccess/eveningSuccessPattern.jpg"
+                "pattern": "./img/eveningSuccess/eveningSuccessPattern.png"
             },
             "link": "http://eveningsuccess.clovismaniguet.fr/"
         },
@@ -75,10 +77,10 @@
                 "tools": "#JavaScript #Templating #Google"
             },
             "images": {
-                "background": "./img/dailyMasterpiece/dailyMasterpieceBg.jpg",
+                "background": "./img/dailyMasterpiece/dailyMasterpieceBg.png",
                 "laptop1": "./img/dailyMasterpiece/dailyMasterpieceLaptop1.png",
                 "laptop2": "./img/dailyMasterpiece/dailyMasterpieceLaptop2.png",
-                "pattern": "./img/dailyMasterpiece/dailyMasterpiecePattern.jpg"
+                "pattern": "./img/dailyMasterpiece/dailyMasterpiecePattern.png"
             },
             "link": "http://dailymasterpiece.benjaminchareyron.com/"
         }

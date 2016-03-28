@@ -1,0 +1,88 @@
+.work{
+    
+    font-size: 1.2em;
+    
+    h2{
+        font-size: 3em;
+    }
+    
+    .left-side{
+        
+        @include make-xs-column(12);
+        
+        @include make-lg-column-push(1);
+        @include make-lg-column(5);
+        
+        height: 85vh; margin-top: 7.5vh;
+        overflow: hidden;
+        
+        img{
+            position: absolute;
+        }
+        
+        .workBg{
+            display: none;
+        }
+        
+        .workLaptop1{
+            top: 4vh; right: -20px;
+        }
+        
+        .workLaptop2{
+            bottom: 4vh; left: -20px;
+        }
+    }
+    
+    .right-side{
+        
+        @include make-row();
+        
+        @include make-xs-column(12);
+        
+        @include make-lg-column-push(1);
+        @include make-lg-column(5);
+        
+        .presentation{
+            
+            @include make-xs-column(12);
+            
+            @include make-lg-column-offset(-1);
+            
+            z-index: 15;
+            
+            margin-top: 5vh;
+            background-color: $color2;
+            
+        }
+        
+        .pattern{
+            
+            @include make-xs-column(12);
+            
+            @include make-lg-column-push(1);
+            @include make-lg-column-offset(1);
+            @include make-lg-column(10);
+            
+            z-index: 10;
+            
+            height: 20vh; margin-top: -2vh;
+            
+        }
+        
+         
+    }
+   
+}
+
+
+
+// Backgrounds
+
+#nextToSchoolBg{
+    background: url(../img/nextToSchool/nextToSchoolBg.png) center no-repeat;
+    @include background-size(cover);
+}
+
+#nextToSchoolPattern{
+    background: url(../img/nextToSchool/nextToSchoolPattern.png) repeat;
+}

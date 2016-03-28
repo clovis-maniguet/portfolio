@@ -5867,3 +5867,113 @@ button.close {
       line-height: 10px; }
     .home .intro hr {
       width: 80%; }
+
+.work {
+  font-size: 1.2em; }
+  .work h2 {
+    font-size: 3em; }
+  .work .left-side {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 85vh;
+    margin-top: 7.5vh;
+    overflow: hidden; }
+    @media (min-width: 1200px) {
+      .work .left-side {
+        left: 8.33333%; } }
+    @media (min-width: 1200px) {
+      .work .left-side {
+        float: left;
+        width: 41.66667%; } }
+    .work .left-side img {
+      position: absolute; }
+    .work .left-side .workBg {
+      display: none; }
+    .work .left-side .workLaptop1 {
+      top: 4vh;
+      right: -20px; }
+    .work .left-side .workLaptop2 {
+      bottom: 4vh;
+      left: -20px; }
+  .work .right-side {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .work .right-side:before, .work .right-side:after {
+      content: " ";
+      display: table; }
+    .work .right-side:after {
+      clear: both; }
+    @media (min-width: 1200px) {
+      .work .right-side {
+        left: 8.33333%; } }
+    @media (min-width: 1200px) {
+      .work .right-side {
+        float: left;
+        width: 41.66667%; } }
+    .work .right-side .presentation {
+      position: relative;
+      float: left;
+      width: 100%;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      z-index: 15;
+      margin-top: 5vh;
+      background-color: #022859; }
+      @media (min-width: 1200px) {
+        .work .right-side .presentation {
+          margin-left: -8.33333%; } }
+    .work .right-side .pattern {
+      position: relative;
+      float: left;
+      width: 100%;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      z-index: 10;
+      height: 20vh;
+      margin-top: -2vh; }
+      @media (min-width: 1200px) {
+        .work .right-side .pattern {
+          left: 8.33333%; } }
+      @media (min-width: 1200px) {
+        .work .right-side .pattern {
+          margin-left: 8.33333%; } }
+      @media (min-width: 1200px) {
+        .work .right-side .pattern {
+          float: left;
+          width: 83.33333%; } }
+
+#nextToSchoolBg {
+  background: url(../img/nextToSchool/nextToSchoolBg.png) center no-repeat;
+  -webkit-background-size: cover;
+  -khtml-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#nextToSchoolPattern {
+  background: url(../img/nextToSchool/nextToSchoolPattern.png) repeat; }

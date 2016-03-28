@@ -1,11 +1,16 @@
 // Global object of the Application ** Object ** app
-var app = function(){
+var App = function(){
    
 	// Empty object to stock our pages
 	this.pages = {};
 
     // Current page null 
 	this.currentPage = null;
+    
+    this.mainContainer = $('body');
+    
+    // Datas path
+    this.datasPath = '../../assets/data.json';
 
 	// Initialization
 	this.init();
@@ -13,117 +18,199 @@ var app = function(){
 }
 
 // Initialization
-app.prototype.init = function(){
+App.prototype.init = function(){
     
-    // Initialization Home page
-    this.pages.home = new home();
-    
-    // Initialization works pages
-    // this.pages.works.studentCheck = new work();
-    
-    // this.pages.works.gen = new work();
-    
-    // this.pages.works.slimyBoy = new work();
-    
-    // this.pages.works.eveningSuccess = new work();
-    
-    // this.pages.works.dailymasterpieces = new work();
-    
-    // // Initialization contact page
-    // this.pages.contact = new contact();
+    // Load datas
+	this.loadDatas();
     
 }
-var loader = function(){
+
+// Load datas
+App.prototype.loadDatas = function(){
     
-    this.data = {};
+    // Save context
+	var self = this;
+
+	// Get datas
+	$.getJSON( this.datasPath, function(response){
+
+		// Save datas
+		self.datas = response;
+
+		// Once datas are loaded
+		self.onDatasLoaded();
+
+	});
     
-    this.url = '../../assets/data.json';
+}
+
+// Once datas are loaded
+App.prototype.onDatasLoaded = function() {
+
+	// Create router
+	this.router = new Router();
+
+	// Create viewController
+	this.viewController = new ViewController();
+
+};
+var Router = function(){
+
+	// Create navigate event
+	this._onNavigate = new signals.Signal();
+
+	// Create routes
+	this.createRoutes();
+
+};
+
+// Init router
+Router.prototype.init = function() {
+
+	var self = this;
+
+	// Bind HistoryJS state change
+	History.Adapter.bind(window, "statechange", function(e){
+
+		self.onStateChange(e);
+
+	});
+
+	// Parse first token
+	this.onStateChange();
+
+};
+
+// On state change
+Router.prototype.onStateChange = function(e) {
+	
+	// Get token
+	var token = this.getToken();
+
+	// Parse token - test if it matches a route
+	crossroads.parse( token );
+
+};
+
+// Create routes
+Router.prototype.createRoutes = function() {
+
+	var self = this;
+
+	// Homepage
+	crossroads.addRoute( '/', function(){
+        
+        
+
+		// Dispatch navigate event
+		self._onNavigate.dispatch({
+			view: 'home'
+		});
+
+		console.log( '## Navigate view home' );
+
+	});
+
+	// Experience
+	crossroads.addRoute( '/student-check' , function(){
+
+		self._onNavigate.dispatch({
+			view: 'work'
+		});
+
+		console.log( '## Navigate view experience' );
+
+	});
+
+};
+
+// Navigate
+Router.prototype.navigate = function( href ) {
+	
+	History.pushState(null, null, href);
+
+};
+
+// Get token from History hash
+Router.prototype.getToken = function() {
+	
+	var token = History.getState().hash;
+
+	if ( token.indexOf('?') != -1 ){
+
+		var tokenSplit = token.split('?');
+		return tokenSplit[0];
+
+	} else {
+
+		return token;
+
+	}
+
+};
+var ViewController = function(){
+    
+    this.views = {};
     
     this.init();
     
 }
 
-loader.prototype.init = function(){
+ViewController.prototype.init = function(){
     
-    this.load();
+    this.views = {
+        
+        'home': new Home(),
+        'studentCheck': new Work('studentCheck')
+        
+    }
+    
+    this.pushViews();
     
 }
 
-loader.prototype.load = function(){
-    
-    var self = this;
-    
-    $.getJSON( this.url , function( data ) {
+ViewController.prototype.pushViews = function(){
+   
+    for(var view in this.views) { 
         
-        self.data = data;
-        
-        
-        
-    });
+        $('#main').append(this.views[view].template);
+       
+    }
     
 }
-// Routing file
 
-// Route : /
-// Page  : home
-crossroads.addRoute('/', function(){
-    
-    // Check if a page is loaded
-    if ( app.currentPage != null ) app.currentPage.hide();
-
-    // We show the home page
-    app.pages.home.show();
-
-    // Save the page as currentPage
-    app.currentPage = app.pages.home;
-
-});
-
-
-// // Route : /student-check
-// // Page  : studentCheck
-// crossroads.addRoute('/student-check', function(){
-
-//     // Check if a page is loaded
-//     if ( app.currentPage != null ) app.currentPage.hide();
-
-//     // We show the studentCheck page
-//     app.pages.works.studentCheck.show();
-
-//     // Save the page as currentPage
-//     app.currentPage = app.pages.works.studentCheck;
-
-// });
-
-var home = function(){
+var Home = function(){
     
     this.id = 'home';
     
-    this.data = {};
+    this.dataPath = app.datas[this.id];
     
     this.template = {};
-    
-    this.url = '../../assets/data.json';
     
     this.init();
     
 }
 
-home.prototype.init = function(){
-    
-     $.getJSON( this.url , function( data ) {
-        
-        self.data = data;
-        
-        self.template = templates.home(self.data.home);
-        
-        $('body').html(self.template);
-        
-        console.log(self.data);
-        
-    });
+Home.prototype.init = function(){
+
+     this.template = templates.home(this.dataPath);
     
 }
 
-// var loader = new loader();
-var app = new app();
+var Work = function(name){
+    
+    this.id = 'work';
+    
+    this.dataPath = app.datas[this.id][name];
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+Work.prototype.init = function(){
+    
+     this.template = templates.work(this.dataPath);
+    
+}

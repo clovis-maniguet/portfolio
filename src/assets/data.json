@@ -3,15 +3,15 @@
 		"title": "Clovis Maniguet",
 		"profile": {
             "word1": ["Junior", "Hetic", "Back", "Front"],
-            "word2": "Developper"
+            "word2": "Developer"
         }
 	},
-    "works": {
-        "studentCheck": {
+    "work": {
+        "nextToSchool": {
             "textes": {
-                "title": "Student Check",
-                "content": "fzfpzeivjozievj zefihzi eofzofi efioz",
-                "jobs": "@BackDeveloper",
+                "title": "Next To School",
+                "content": "Based on our API, Next To School help students to find good deals near their school's geographical area (restaurants, flats, objects, ...)",
+                "jobs": "@BackDeveloper / @DatabaseConceptor",
                 "tools": "#Symfony #PHP #MySQL"
             },
             "images": {
@@ -19,7 +19,68 @@
                 "laptop1": "./img/studentCheck/studentCheckLaptop1.png",
                 "laptop2": "./img/studentCheck/studentCheckLaptop2.png",
                 "pattern": "./img/studentCheck/studentCheckPattern.jpg"
-            }
+            },
+            "link": "http://api.nexttoschool.com/"
+        },
+        "gen": {
+            "textes": {
+                "title": "G.E.N.",
+                "content": "Call for tenders from the State to imagine a numerique solution to develop his new project, the numerique for everyone",
+                "jobs": "@ContentManager",
+                "tools": "#Invision #Tender #FrenchState"
+            },
+            "images": {
+                "background": "./img/gen/genBg.jpg",
+                "laptop1": "./img/gen/genLaptop1.png",
+                "laptop2": "./img/gen/genLaptop2.png",
+                "pattern": "./img/gen/genPattern.jpg"
+            },
+            "link": "https://projects.invisionapp.com/share/CB4V388EN#/screens"
+        },
+        "slimyBoy": {
+            "textes": {
+                "title": "Slimy Boy",
+                "content": "An original video game inspired by the cult 'Super Meat Boy'. MMI 2015 award for best multimedia project",
+                "jobs": "@Developer / @ProjectManager",
+                "tools": "#Unity3D #Csharp #Management"
+            },
+            "images": {
+                "background": "./img/slimyBoy/slimyBoyBg.jpg",
+                "laptop1": "./img/slimyBoy/slimyBoyLaptop1.png",
+                "laptop2": "./img/slimyBoy/slimyBoyLaptop2.png",
+                "pattern": "./img/slimyBoy/slimyBoyPattern.jpg"
+            },
+            "link": "http://slimyboy.clovismaniguet.fr/"
+        },
+        "eveningSuccess": {
+            "textes": {
+                "title": "Evening Success",
+                "content": "A web solution for customers to find tips to make a good parties, informations looks like recipes",
+                "jobs": "@BackDeveloper / @FrontDeveloper",
+                "tools": "#Wordpress #PHP #JavaScript"
+            },
+            "images": {
+                "background": "./img/eveningSuccess/eveningSuccessBg.jpg",
+                "laptop1": "./img/eveningSuccess/eveningSuccessLaptop1.png",
+                "laptop2": "./img/eveningSuccess/eveningSuccessLaptop2.png",
+                "pattern": "./img/eveningSuccess/eveningSuccessPattern.jpg"
+            },
+            "link": "http://eveningsuccess.clovismaniguet.fr/"
+        },
+        "dailyMasterpiece": {
+            "textes": {
+                "title": "DailyMasterpiece",
+                "content": "DailyMasterpiece is a Google Chrome extension that changes your new tab page by a beautiful monument. Learn more, without doing more !",
+                "jobs": "@FrontDeveloper",
+                "tools": "#JavaScript #Templating #Google"
+            },
+            "images": {
+                "background": "./img/dailyMasterpiece/dailyMasterpieceBg.jpg",
+                "laptop1": "./img/dailyMasterpiece/dailyMasterpieceLaptop1.png",
+                "laptop2": "./img/dailyMasterpiece/dailyMasterpieceLaptop2.png",
+                "pattern": "./img/dailyMasterpiece/dailyMasterpiecePattern.jpg"
+            },
+            "link": "http://dailymasterpiece.benjaminchareyron.com/"
         }
     },
     "contact": {
@@ -28,7 +89,11 @@
             "github": "/clovis-maniguet",
             "twitter": "@clovismaniguet",
             "linkedIn": "linkedIn",
-            "copyrights": "Clovis Maniguet © 2016 Tous droits réservés"
+            "copyrights": "Clovis Maniguet © 2016 All rights reserved"
+        },
+        "cv": {
+            "texte": "Get my resume",
+            "link": "./assets/cv.pdf"
         },
         "images": {
             "mail": "./img/social/mail.svg",

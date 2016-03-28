@@ -1,11 +1,16 @@
 // Global object of the Application ** Object ** app
-var app = function(){
+var App = function(){
    
 	// Empty object to stock our pages
 	this.pages = {};
 
     // Current page null 
 	this.currentPage = null;
+    
+    this.mainContainer = $('body');
+    
+    // Datas path
+    this.datasPath = '../../assets/data.json';
 
 	// Initialization
 	this.init();
@@ -13,23 +18,39 @@ var app = function(){
 }
 
 // Initialization
-app.prototype.init = function(){
+App.prototype.init = function(){
     
-    // Initialization Home page
-    this.pages.home = new home();
-    
-    // Initialization works pages
-    // this.pages.works.studentCheck = new work();
-    
-    // this.pages.works.gen = new work();
-    
-    // this.pages.works.slimyBoy = new work();
-    
-    // this.pages.works.eveningSuccess = new work();
-    
-    // this.pages.works.dailymasterpieces = new work();
-    
-    // // Initialization contact page
-    // this.pages.contact = new contact();
+    // Load datas
+	this.loadDatas();
     
 }
+
+// Load datas
+App.prototype.loadDatas = function(){
+    
+    // Save context
+	var self = this;
+
+	// Get datas
+	$.getJSON( this.datasPath, function(response){
+
+		// Save datas
+		self.datas = response;
+
+		// Once datas are loaded
+		self.onDatasLoaded();
+
+	});
+    
+}
+
+// Once datas are loaded
+App.prototype.onDatasLoaded = function() {
+
+	// Create router
+	this.router = new Router();
+
+	// Create viewController
+	this.viewController = new ViewController();
+
+};

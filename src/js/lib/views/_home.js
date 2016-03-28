@@ -1,32 +1,17 @@
-var home = function(){
+var Home = function(){
     
     this.id = 'home';
     
-    this.data = {};
+    this.dataPath = app.datas[this.id];
     
     this.template = {};
-    
-    this.url = '../../assets/data.json';
     
     this.init();
     
 }
 
-home.prototype.init = function(){
-    
-     $.getJSON( this.url , function( data ) {
-        
-        self.data = data;
-        
-        self.template = templates.home(self.data.home);
-        
-        $('body').html(self.template);
-        
-        console.log(self.data);
-        
-    });
+Home.prototype.init = function(){
+
+     this.template = templates.home(this.dataPath);
     
 }
-
-// var loader = new loader();
-var app = new app();

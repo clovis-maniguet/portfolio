@@ -1,32 +1,94 @@
-// Routing file
+var Router = function(){
 
-// Route : /
-// Page  : home
-crossroads.addRoute('/', function(){
-    
-    // Check if a page is loaded
-    if ( app.currentPage != null ) app.currentPage.hide();
+	// Create navigate event
+	this._onNavigate = new signals.Signal();
 
-    // We show the home page
-    app.pages.home.show();
+	// Create routes
+	this.createRoutes();
 
-    // Save the page as currentPage
-    app.currentPage = app.pages.home;
+};
 
-});
+// Init router
+Router.prototype.init = function() {
 
+	var self = this;
 
-// // Route : /student-check
-// // Page  : studentCheck
-// crossroads.addRoute('/student-check', function(){
+	// Bind HistoryJS state change
+	History.Adapter.bind(window, "statechange", function(e){
 
-//     // Check if a page is loaded
-//     if ( app.currentPage != null ) app.currentPage.hide();
+		self.onStateChange(e);
 
-//     // We show the studentCheck page
-//     app.pages.works.studentCheck.show();
+	});
 
-//     // Save the page as currentPage
-//     app.currentPage = app.pages.works.studentCheck;
+	// Parse first token
+	this.onStateChange();
 
-// });
+};
+
+// On state change
+Router.prototype.onStateChange = function(e) {
+	
+	// Get token
+	var token = this.getToken();
+
+	// Parse token - test if it matches a route
+	crossroads.parse( token );
+
+};
+
+// Create routes
+Router.prototype.createRoutes = function() {
+
+	var self = this;
+
+	// Homepage
+	crossroads.addRoute( '/', function(){
+        
+        
+
+		// Dispatch navigate event
+		self._onNavigate.dispatch({
+			view: 'home'
+		});
+
+		console.log( '## Navigate view home' );
+
+	});
+
+	// Experience
+	crossroads.addRoute( '/student-check' , function(){
+
+		self._onNavigate.dispatch({
+			view: 'work'
+		});
+
+		console.log( '## Navigate view experience' );
+
+	});
+
+};
+
+// Navigate
+Router.prototype.navigate = function( href ) {
+	
+	History.pushState(null, null, href);
+
+};
+
+// Get token from History hash
+Router.prototype.getToken = function() {
+	
+	var token = History.getState().hash;
+
+	if ( token.indexOf('?') != -1 ){
+
+		var tokenSplit = token.split('?');
+		return tokenSplit[0];
+
+	} else {
+
+		return token;
+
+	}
+
+};

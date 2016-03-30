@@ -1,0 +1,44 @@
+.contact{
+    
+    position: relative;
+    @include make-row();
+    
+    h2{
+        font-size: 4em;
+        text-align: center;
+        margin-top: 5vh;
+    }
+    
+    .social{
+        
+        @include make-row();
+        
+        .elmt{
+            
+            @include make-xs-column(6);
+        
+            @include make-lg-column-push(2);
+            @include make-lg-column(2);
+            
+            text-align: center;
+            
+            margin-top: 30vh;
+            
+            img{
+                width: 50%; height: auto;
+                margin-bottom: 1vh;
+            }
+            
+        }
+        
+    }
+    
+    #copyrights{
+        position: absolute;
+        @include transform(translateX(-50%));
+        bottom: 30px; left: 50%;
+    }
+    
+    
+    
+}

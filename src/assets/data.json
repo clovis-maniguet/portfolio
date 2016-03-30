@@ -37,7 +37,9 @@
                 "laptop2": "./img/gen/genLaptop2.png",
                 "pattern": "./img/gen/genPattern.png"
             },
-            "link": "https://projects.invisionapp.com/share/CB4V388EN#/screens"
+            "link": "https://projects.invisionapp.com/share/CB4V388EN#/screens",
+            "idBackground": "genBg",
+            "idPattern": "genPattern"
         },
         "slimyBoy": {
             "textes": {
@@ -52,7 +54,9 @@
                 "laptop2": "./img/slimyBoy/slimyBoyLaptop2.png",
                 "pattern": "./img/slimyBoy/slimyBoyPattern.png"
             },
-            "link": "http://slimyboy.clovismaniguet.fr/"
+            "link": "http://slimyboy.clovismaniguet.fr/",
+            "idBackground": "slimyBoyBg",
+            "idPattern": "slimyBoyPattern"
         },
         "eveningSuccess": {
             "textes": {
@@ -67,7 +71,9 @@
                 "laptop2": "./img/eveningSuccess/eveningSuccessLaptop2.png",
                 "pattern": "./img/eveningSuccess/eveningSuccessPattern.png"
             },
-            "link": "http://eveningsuccess.clovismaniguet.fr/"
+            "link": "http://eveningsuccess.clovismaniguet.fr/",
+            "idBackground": "eveningSuccessBg",
+            "idPattern": "eveningSuccessPattern"
         },
         "dailyMasterpiece": {
             "textes": {
@@ -82,7 +88,9 @@
                 "laptop2": "./img/dailyMasterpiece/dailyMasterpieceLaptop2.png",
                 "pattern": "./img/dailyMasterpiece/dailyMasterpiecePattern.png"
             },
-            "link": "http://dailymasterpiece.benjaminchareyron.com/"
+            "link": "http://dailymasterpiece.benjaminchareyron.com/",
+            "idBackground": "dailyMasterpieceBg",
+            "idPattern": "dailyMasterpiecePattern"
         }
     },
     "contact": {
@@ -90,8 +98,8 @@
             "title": "CONTACT ME",
             "mail": "clovis.maniguet@hetic.net",
             "github": "/clovis-maniguet",
-            "twitter": "@clovismaniguet",
-            "linkedIn": "linkedIn",
+            "twitter": "@clovis_maniguet",
+            "linkedIn": "/clovis-maniguet",
             "copyrights": "Clovis Maniguet © 2016 All rights reserved"
         },
         "cv": {
@@ -99,10 +107,10 @@
             "link": "./assets/cv.pdf"
         },
         "images": {
-            "mail": "./img/social/mail.svg",
-            "github": "./img/social/github.svg",
-            "twitter": "./img/social/twitter.svg",
-            "linkedIn": "./img/social/linkedIn.svg"
+            "mail": "./img/contact/mail.svg",
+            "github": "./img/contact/github.svg",
+            "twitter": "./img/contact/twitter.svg",
+            "linkedIn": "./img/contact/linkedIn.svg"
         }
     }
 }

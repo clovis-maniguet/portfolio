@@ -5830,11 +5830,22 @@ button.close {
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
-.view {
-  width: 100%;
-  height: 100vh;
+body {
   background-color: #1b1f28;
   color: #fefefe; }
+
+.view {
+  width: 100%;
+  min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .view:before, .view:after {
+    content: " ";
+    display: table; }
+  .view:after {
+    clear: both; }
 
 .home {
   background: url("../img/homeBg.png") no-repeat center;
@@ -5884,8 +5895,7 @@ button.close {
     padding-left: 15px;
     padding-right: 15px;
     height: 85vh;
-    margin-top: 7.5vh;
-    overflow: hidden; }
+    margin-top: 7.5vh; }
     @media (min-width: 1200px) {
       .work .left-side {
         left: 8.33333%; } }
@@ -5899,13 +5909,11 @@ button.close {
       display: none; }
     .work .left-side .workLaptop1 {
       top: 4vh;
-      right: -20px; }
+      left: -20px; }
     .work .left-side .workLaptop2 {
       bottom: 4vh;
-      left: -20px; }
+      right: -20px; }
   .work .right-side {
-    margin-left: -15px;
-    margin-right: -15px;
     position: relative;
     float: left;
     width: 100%;
@@ -5916,11 +5924,6 @@ button.close {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px; }
-    .work .right-side:before, .work .right-side:after {
-      content: " ";
-      display: table; }
-    .work .right-side:after {
-      clear: both; }
     @media (min-width: 1200px) {
       .work .right-side {
         left: 8.33333%; } }
@@ -5936,15 +5939,16 @@ button.close {
       padding-left: 15px;
       padding-right: 15px;
       z-index: 15;
-      margin-top: 5vh;
+      margin-top: 20vh;
       background-color: #022859; }
       @media (min-width: 1200px) {
         .work .right-side .presentation {
           margin-left: -8.33333%; } }
     .work .right-side .pattern {
+      left: 8.33333%;
       position: relative;
       float: left;
-      width: 100%;
+      width: 91.66667%;
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px;
@@ -5977,3 +5981,107 @@ button.close {
 
 #nextToSchoolPattern {
   background: url(../img/nextToSchool/nextToSchoolPattern.png) repeat; }
+
+#genBg {
+  background: url(../img/gen/genBg.png) center no-repeat;
+  -webkit-background-size: cover;
+  -khtml-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#genPattern {
+  background: url(../img/gen/genPattern.png) repeat; }
+
+#slimyBoyBg {
+  background: url(../img/slimyBoy/slimyBoyBg.png) center no-repeat;
+  -webkit-background-size: cover;
+  -khtml-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#slimyBoyPattern {
+  background: url(../img/slimyBoy/slimyBoyPattern.png) repeat; }
+
+#eveningSuccessBg {
+  background: url(../img/eveningSuccess/eveningSuccessBg.png) center no-repeat;
+  -webkit-background-size: cover;
+  -khtml-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#eveningSuccessPattern {
+  background: url(../img/eveningSuccess/eveningSuccessPattern.png) repeat; }
+
+#dailyMasterpieceBg {
+  background: url(../img/dailyMasterpiece/dailyMasterpieceBg.png) center no-repeat;
+  -webkit-background-size: cover;
+  -khtml-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+#dailyMasterpiecePattern {
+  background: url(../img/dailyMasterpiece/dailyMasterpiecePattern.png) repeat; }
+
+.contact {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .contact:before, .contact:after {
+    content: " ";
+    display: table; }
+  .contact:after {
+    clear: both; }
+  .contact h2 {
+    font-size: 4em;
+    text-align: center;
+    margin-top: 5vh; }
+  .contact .social {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .contact .social:before, .contact .social:after {
+      content: " ";
+      display: table; }
+    .contact .social:after {
+      clear: both; }
+    .contact .social .elmt {
+      position: relative;
+      float: left;
+      width: 50%;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+      margin-top: 30vh; }
+      @media (min-width: 1200px) {
+        .contact .social .elmt {
+          left: 16.66667%; } }
+      @media (min-width: 1200px) {
+        .contact .social .elmt {
+          float: left;
+          width: 16.66667%; } }
+      .contact .social .elmt img {
+        width: 50%;
+        height: auto;
+        margin-bottom: 1vh; }
+  .contact #copyrights {
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -khtml-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 30px;
+    left: 50%; }

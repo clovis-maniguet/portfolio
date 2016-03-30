@@ -14,7 +14,6 @@
         @include make-lg-column(5);
         
         height: 85vh; margin-top: 7.5vh;
-        overflow: hidden;
         
         img{
             position: absolute;
@@ -25,17 +24,15 @@
         }
         
         .workLaptop1{
-            top: 4vh; right: -20px;
+            top: 4vh; left: -20px;
         }
         
         .workLaptop2{
-            bottom: 4vh; left: -20px;
+            bottom: 4vh; right: -20px;
         }
     }
     
     .right-side{
-        
-        @include make-row();
         
         @include make-xs-column(12);
         
@@ -50,14 +47,15 @@
             
             z-index: 15;
             
-            margin-top: 5vh;
+            margin-top: 20vh;
             background-color: $color2;
             
         }
         
         .pattern{
+            @include make-xs-column-push(1);
+            @include make-xs-column(11);
             
-            @include make-xs-column(12);
             
             @include make-lg-column-push(1);
             @include make-lg-column-offset(1);
@@ -85,4 +83,40 @@
 
 #nextToSchoolPattern{
     background: url(../img/nextToSchool/nextToSchoolPattern.png) repeat;
+}
+
+#genBg{
+    background: url(../img/gen/genBg.png) center no-repeat;
+    @include background-size(cover);
+}
+
+#genPattern{
+    background: url(../img/gen/genPattern.png) repeat;
+}
+
+#slimyBoyBg{
+    background: url(../img/slimyBoy/slimyBoyBg.png) center no-repeat;
+    @include background-size(cover);
+}
+
+#slimyBoyPattern{
+    background: url(../img/slimyBoy/slimyBoyPattern.png) repeat;
+}
+
+#eveningSuccessBg{
+    background: url(../img/eveningSuccess/eveningSuccessBg.png) center no-repeat;
+    @include background-size(cover);
+}
+
+#eveningSuccessPattern{
+    background: url(../img/eveningSuccess/eveningSuccessPattern.png) repeat;
+}
+
+#dailyMasterpieceBg{
+    background: url(../img/dailyMasterpiece/dailyMasterpieceBg.png) center no-repeat;
+    @include background-size(cover);
+}
+
+#dailyMasterpiecePattern{
+    background: url(../img/dailyMasterpiece/dailyMasterpiecePattern.png) repeat;
 }

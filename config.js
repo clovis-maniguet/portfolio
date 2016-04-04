@@ -2,7 +2,7 @@ module.exports = {
 	vhost: "clovismaniguet.dev",
 	scripts: {
 		app: ['./src/js/lib/Views/_view.js', './src/js/lib/**/*.js'],
-		vendors: ['./bower_components/jquery/dist/jquery.min.js', './node_modules/signals/dist/signals.min.js', './node_modules/crossroads/dist/crossroads.min.js', './node_modules/handlebars/dist/handlebars.min.js', './node_modules/gsap/src/minified/TweenMax.min.js', './bower_components/history.js/scripts/compressed/history.js'],
+		vendors: ['./bower_components/jquery/dist/jquery.min.js', './node_modules/signals/dist/signals.min.js', './node_modules/crossroads/dist/crossroads.min.js', './node_modules/handlebars/dist/handlebars.min.js', './node_modules/gsap/src/minified/TweenMax.min.js', './bower_components/history.js/scripts/compressed/history.js', './bower_components/scrollreveal/dist/scrollreveal.min.js', './bower_components/fullpage.js/jquery.fullPage.min.js'],
 		dist: './src/js/dist'
 	},
 	images: {

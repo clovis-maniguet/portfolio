@@ -1,5 +1,8 @@
 .work{
     
+    position: relative;
+    overflow: hidden;
+    
     font-size: 1.2em;
     
     h2{
@@ -7,48 +10,58 @@
     }
     
     .left-side{
-        
-        @include make-xs-column(12);
-        
-        @include make-lg-column-push(1);
-        @include make-lg-column(5);
-        
-        height: 85vh; margin-top: 7.5vh;
-        
-        img{
-            position: absolute;
-        }
-        
-        .workBg{
-            display: none;
-        }
-        
-        .workLaptop1{
-            top: 4vh; left: -20px;
-        }
-        
-        .workLaptop2{
-            bottom: 4vh; right: -20px;
+        display: none;
+    
+        @media (min-width: 992px) {
+            
+            display: block;
+            
+            @include make-xs-column(12);
+            
+            @include make-md-column-push(1);
+            @include make-md-column(5);
+            
+            height: 85vh; margin-top: 7.5vh;
+            
+            img{
+                position: absolute;
+            }
+            
+            .workBg{
+                display: none;
+            }
+            
+            .workLaptop1{
+                top: 4vh; left: -20px;
+            }
+            
+            .workLaptop2{
+                bottom: 4vh; right: -20px;
+            }
         }
     }
-    
     .right-side{
         
         @include make-xs-column(12);
         
-        @include make-lg-column-push(1);
-        @include make-lg-column(5);
+        @include make-md-column-push(1);
+        @include make-md-column(5);
         
         .presentation{
             
-            @include make-xs-column(12);
+            @include make-xs-column(11);
             
-            @include make-lg-column-offset(-1);
+            @include make-md-column-offset(-1);
             
             z-index: 15;
             
-            margin-top: 20vh;
+            margin-top: 10vh;
+            
             background-color: $color2;
+            
+            @media (min-width: 992px) {
+                margin-top: 20vh;
+            }
             
         }
         
@@ -57,9 +70,9 @@
             @include make-xs-column(11);
             
             
-            @include make-lg-column-push(1);
-            @include make-lg-column-offset(1);
-            @include make-lg-column(10);
+            @include make-md-column-push(1);
+            @include make-md-column-offset(1);
+            @include make-md-column(10);
             
             z-index: 10;
             
@@ -69,13 +82,22 @@
         
          
     }
+    
+    .pageNum{
+        position: absolute;
+        bottom: 0px;
+        font-size: 10em;
+        left: 50%;
+        
+        @include transform(translate(-50%, 50%));
+        
+    }
    
 }
 
 
 
 // Backgrounds
-
 #nextToSchoolBg{
     background: url(../img/nextToSchool/nextToSchoolBg.png) center no-repeat;
     @include background-size(cover);

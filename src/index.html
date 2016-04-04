@@ -29,6 +29,16 @@
         
         var app = new App();
         
+        $(function(){
+            
+            $(window).on('resize', function(){
+                
+                app.resizer();
+                
+            })
+            
+        })
+        
     </script>
   </body>
 </html>

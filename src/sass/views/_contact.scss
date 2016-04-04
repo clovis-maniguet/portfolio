@@ -1,7 +1,6 @@
 .contact{
     
     position: relative;
-    @include make-row();
     
     h2{
         font-size: 4em;
@@ -11,34 +10,77 @@
     
     .social{
         
-        @include make-row();
-        
         .elmt{
             
             @include make-xs-column(6);
         
-            @include make-lg-column-push(2);
-            @include make-lg-column(2);
+            @include make-md-column-push(2);
+            @include make-md-column(2);
             
             text-align: center;
             
-            margin-top: 30vh;
+            margin-top: 15vh;
+            
+            @media (min-width: 992px) {
+            
+                margin-top: 20vh;
+            
+            }
+            
+            p{
+                display: none;
+                
+                @media (min-width: 992px) {
+                    display: block;
+                }
+            }
             
             img{
                 width: 50%; height: auto;
                 margin-bottom: 1vh;
             }
             
+            a img{
+                @include transition(all, .5s, ease-in-out);
+                opacity: 1;
+                @include rotate(0);
+                
+                &:hover{
+                    @include transition(all, .5s, ease-in-out);
+                    opacity: 0.8;
+                    @include rotate(5);
+                }
+                
+            }
+            
         }
         
     }
     
+    .resume{
+        
+        margin-top: 10vh;
+        
+        @include make-xs-column(12);
+        
+        text-align: center;
+        
+    }
+    
+    
     #copyrights{
         position: absolute;
         @include transform(translateX(-50%));
-        bottom: 30px; left: 50%;
+        text-align: center;
+        width: 100%;
+        bottom: 0px; left: 50%;
     }
     
+    @media (min-width: 992px) {
+        #copyrights{
+            bottom: 30px;
+        }
+    }
     
     
 }

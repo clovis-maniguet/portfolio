@@ -19,6 +19,8 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "history.js": "^1.8.0"
+    "history.js": "^1.8.0",
+    "scrollreveal": "scroll-reveal#^3.1.4",
+    "fullpage.js": "^2.7.8"
   }
 }

@@ -12,8 +12,6 @@ var Contact = function(){
 
 Contact.prototype.init = function(){
 
-
-console.log(this.dataPath);
      this.template = templates.contact(this.dataPath);
     
 }

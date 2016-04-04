@@ -22,7 +22,8 @@
             },
             "link": "http://api.nexttoschool.com/",
             "idBackground": "nextToSchoolBg",
-            "idPattern": "nextToSchoolPattern"
+            "idPattern": "nextToSchoolPattern",
+            "numPage": "01"
         },
         "gen": {
             "textes": {
@@ -39,7 +40,8 @@
             },
             "link": "https://projects.invisionapp.com/share/CB4V388EN#/screens",
             "idBackground": "genBg",
-            "idPattern": "genPattern"
+            "idPattern": "genPattern",
+            "numPage": "02"
         },
         "slimyBoy": {
             "textes": {
@@ -56,7 +58,8 @@
             },
             "link": "http://slimyboy.clovismaniguet.fr/",
             "idBackground": "slimyBoyBg",
-            "idPattern": "slimyBoyPattern"
+            "idPattern": "slimyBoyPattern",
+            "numPage": "03"
         },
         "eveningSuccess": {
             "textes": {
@@ -71,14 +74,15 @@
                 "laptop2": "./img/eveningSuccess/eveningSuccessLaptop2.png",
                 "pattern": "./img/eveningSuccess/eveningSuccessPattern.png"
             },
-            "link": "http://eveningsuccess.clovismaniguet.fr/",
+            "link": "http://evening-success.clovismaniguet.fr/",
             "idBackground": "eveningSuccessBg",
-            "idPattern": "eveningSuccessPattern"
+            "idPattern": "eveningSuccessPattern",
+            "numPage": "04"
         },
         "dailyMasterpiece": {
             "textes": {
-                "title": "DailyMasterpiece",
-                "content": "DailyMasterpiece is a Google Chrome extension that changes your new tab page by a beautiful monument. Learn more, without doing more !",
+                "title": "Daily Masterpiece",
+                "content": "Daily Masterpiece is a Google Chrome extension that changes your new tab page by a beautiful monument. Learn more, without doing more !",
                 "jobs": "@FrontDeveloper",
                 "tools": "#JavaScript #Templating #Google"
             },
@@ -90,7 +94,8 @@
             },
             "link": "http://dailymasterpiece.benjaminchareyron.com/",
             "idBackground": "dailyMasterpieceBg",
-            "idPattern": "dailyMasterpiecePattern"
+            "idPattern": "dailyMasterpiecePattern",
+            "numPage": "05"
         }
     },
     "contact": {
@@ -111,6 +116,12 @@
             "github": "./img/contact/github.svg",
             "twitter": "./img/contact/twitter.svg",
             "linkedIn": "./img/contact/linkedIn.svg"
+        },
+        "links":{
+            "mail": "clovis.maniguet@hetic.net",
+            "github": "/clovis-maniguet",
+            "twitter": "@clovis_maniguet",
+            "linkedIn": "/clovis-maniguet"
         }
     }
 }

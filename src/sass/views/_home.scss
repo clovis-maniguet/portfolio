@@ -4,24 +4,39 @@
     @include background-size(cover);
     
     .intro{
-        width: 485px; height: 130px;
-        @include transform(translate(-50%, -50%));
-        position: absolute; top: 50%; left: 50%; bottom: 50%; right: 50%;
+        
+        @include transform(translateY(-50%));
+        margin-top: 50vh;
+        
+        @include make-xs-column(12);
+        
+        @include make-md-column-push(3);
+        @include make-md-column(6);
+        
         text-align: center;
         
-        h1{
-            font-size: 76px;
-            line-height: 35px;
-        }
-        
-        h2{
-            font-size: 48px;
-            line-height: 10px;
-        }
-        
         hr{
-            width: 80%;
+            width: 60%;
         }
+        
+        h1, h2{
+            line-height: 0.8;
+            font-variant: small-caps;
+        }
+        
+        h1{font-size: 6em;}
+        
+        h2{font-size: 5em;}
+        
+        @media (min-width: 992px) {
+            
+            h1, h2{
+                line-height: 0.6;
+            }
+            
+        }      
+        
+        
     }
     
 }

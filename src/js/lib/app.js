@@ -1,5 +1,7 @@
 // Global object of the Application ** Object ** app
 var App = function(){
+    
+    this.window = $(window);
    
 	// Empty object to stock our pages
 	this.pages = {};
@@ -52,5 +54,23 @@ App.prototype.onDatasLoaded = function() {
 
 	// Create viewController
 	this.viewController = new ViewController();
-
+    
+    this.resizer();
+    
 };
+
+App.prototype.resizer = function(){
+    
+    console.log(this.window.width());
+    
+    if( this.window.width() >= 992 ){
+        
+        // Add Animation
+        this.animation = new Animation();
+        
+    }
+    
+    
+    
+    
+}

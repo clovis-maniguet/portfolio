@@ -4,32 +4,32 @@ this["templates"]["contact"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta
 
   return "<div class=\"contact view\">\r\n        \r\n        <h2>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.title : stack1), depth0))
-    + "</h2>\r\n        \r\n        <div class=\"social\">\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <a target=\"_blank\" href=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.mail : stack1), depth0))
+    + "</h2>\r\n        \r\n        <div class=\"social\">\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <a href=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.links : depth0)) != null ? stack1.mail : stack1), depth0))
     + "\">\r\n                    <img src=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.mail : stack1), depth0))
     + "\">                \r\n                    <p>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.mail : stack1), depth0))
     + "</p>\r\n                </a>\r\n            </div>\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <a target=\"_blank\" href=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.github : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.links : depth0)) != null ? stack1.github : stack1), depth0))
     + "\">\r\n                    <img src=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.github : stack1), depth0))
     + "\">\r\n                    <p>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.github : stack1), depth0))
     + "</p>\r\n                </a>\r\n                \r\n            </div>\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <a target=\"_blank\" href=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.twitter : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.links : depth0)) != null ? stack1.twitter : stack1), depth0))
     + "\">\r\n                    <img src=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.twitter : stack1), depth0))
     + "\">\r\n                    <p>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.twitter : stack1), depth0))
     + "</p>\r\n                </a>\r\n                \r\n            </div>\r\n            \r\n            <div class=\"elmt\">\r\n                \r\n                <a target=\"_blank\" href=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.linkedIn : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.links : depth0)) != null ? stack1.linkedIn : stack1), depth0))
     + "\">\r\n                    <img src=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.images : depth0)) != null ? stack1.linkedIn : stack1), depth0))
     + "\">\r\n                    <p>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.textes : depth0)) != null ? stack1.linkedIn : stack1), depth0))
     + "</p>\r\n                </a>\r\n                \r\n            </div>\r\n            \r\n        </div>\r\n        \r\n        <div class=\"resume\">\r\n            <a type=\"button\" class=\"btn btn-warning\" target=\"_blank\" href=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.cs : depth0)) != null ? stack1.link : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.cv : depth0)) != null ? stack1.link : stack1), depth0))
     + "\">"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.cv : depth0)) != null ? stack1.texte : stack1), depth0))
     + "</a>\r\n        </div>\r\n       \r\n        <p id=\"copyrights\">"

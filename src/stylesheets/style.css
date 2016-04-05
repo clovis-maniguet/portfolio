@@ -5834,6 +5834,83 @@ body {
   background-color: #1b1f28;
   color: #fefefe; }
 
+#loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1b1f28;
+  z-index: 9999;
+  overflow: hidden; }
+
+.spinner {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -khtml-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.spinner .ball {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  animation: motion 3s cubic-bezier(0.77, 0, 0.175, 1) infinite; }
+
+.spinner p {
+  color: #fff;
+  margin-top: 5px;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-size: 10px; }
+
+@-webkit-keyframes motion {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1); }
+  25% {
+    -webkit-transform: translateX(-50px) scale(0.3);
+    transform: translateX(-50px) scale(0.3); }
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1); }
+  75% {
+    -webkit-transform: translateX(50px) scale(0.3);
+    transform: translateX(50px) scale(0.3); }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1); } }
+
+@keyframes motion {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1); }
+  25% {
+    -webkit-transform: translateX(-50px) scale(0.3);
+    transform: translateX(-50px) scale(0.3); }
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1); }
+  75% {
+    -webkit-transform: translateX(50px) scale(0.3);
+    transform: translateX(50px) scale(0.3); }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1); } }
+
 .main {
   overflow: hidden; }
 
@@ -5905,40 +5982,33 @@ body {
   .work h2 {
     font-size: 3em; }
   .work .left-side {
-    display: none; }
+    display: none;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 85vh;
+    margin-top: 7.5vh; }
     @media (min-width: 992px) {
       .work .left-side {
-        display: block;
-        position: relative;
-        float: left;
-        width: 100%;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px;
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px;
-        height: 85vh;
-        margin-top: 7.5vh; } }
-  @media (min-width: 992px) and (min-width: 992px) {
-    .work .left-side {
-      left: 8.33333%; } }
-  @media (min-width: 992px) and (min-width: 992px) {
-    .work .left-side {
-      float: left;
-      width: 41.66667%; } }
+        left: 8.33333%; } }
     @media (min-width: 992px) {
-        .work .left-side img {
-          position: absolute; }
-        .work .left-side .workBg {
-          display: none; }
-        .work .left-side .workLaptop1 {
-          top: 4vh;
-          left: -20px; }
-        .work .left-side .workLaptop2 {
-          bottom: 4vh;
-          right: -20px; } }
+      .work .left-side {
+        float: left;
+        width: 41.66667%; } }
+    .work .left-side img {
+      position: absolute; }
+    .work .left-side .workBg {
+      display: none; }
+    .work .left-side .workLaptop1 {
+      top: 4vh;
+      left: -20px; }
+    .work .left-side .workLaptop2 {
+      bottom: 4vh;
+      right: -20px; }
+    @media (min-width: 992px) {
+      .work .left-side {
+        display: block; } }
   .work .right-side {
     position: relative;
     float: left;
@@ -6109,37 +6179,33 @@ body {
       height: auto;
       margin-bottom: 1vh; }
     .contact .social .elmt a img {
-      -webkit-transition: all, 0.5s, ease-in-out;
-      -khtml-transition: all, 0.5s, ease-in-out;
-      -moz-transition: all, 0.5s, ease-in-out;
-      -ms-transition: all, 0.5s, ease-in-out;
-      -o-transition: all, 0.5s, ease-in-out;
-      transition: all, 0.5s, ease-in-out;
+      -webkit-transition: all, 0.2s, ease-in-out;
+      -khtml-transition: all, 0.2s, ease-in-out;
+      -moz-transition: all, 0.2s, ease-in-out;
+      -ms-transition: all, 0.2s, ease-in-out;
+      -o-transition: all, 0.2s, ease-in-out;
+      transition: all, 0.2s, ease-in-out;
       opacity: 1;
-      -webkit-transform: rotate(0deg);
-      -khtml-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      filter: progid:DXImageTransform.Microsoft.Matrix( M11=0, M12=0, M21=0, M22=0, sizingMethod='auto expand');
-      zoom: 1; }
+      -webkit-transform: scale3d(1, 1, 1);
+      -khtml-transform: scale3d(1, 1, 1);
+      -moz-transform: scale3d(1, 1, 1);
+      -ms-transform: scale3d(1, 1, 1);
+      -o-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1); }
       .contact .social .elmt a img:hover {
-        -webkit-transition: all, 0.5s, ease-in-out;
-        -khtml-transition: all, 0.5s, ease-in-out;
-        -moz-transition: all, 0.5s, ease-in-out;
-        -ms-transition: all, 0.5s, ease-in-out;
-        -o-transition: all, 0.5s, ease-in-out;
-        transition: all, 0.5s, ease-in-out;
+        -webkit-transition: all, 0.4s, ease-in-out;
+        -khtml-transition: all, 0.4s, ease-in-out;
+        -moz-transition: all, 0.4s, ease-in-out;
+        -ms-transition: all, 0.4s, ease-in-out;
+        -o-transition: all, 0.4s, ease-in-out;
+        transition: all, 0.4s, ease-in-out;
         opacity: 0.8;
-        -webkit-transform: rotate(5deg);
-        -khtml-transform: rotate(5deg);
-        -moz-transform: rotate(5deg);
-        -ms-transform: rotate(5deg);
-        -o-transform: rotate(5deg);
-        transform: rotate(5deg);
-        filter: progid:DXImageTransform.Microsoft.Matrix( M11=0, M12=0, M21=0, M22=0, sizingMethod='auto expand');
-        zoom: 1; }
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        -khtml-transform: scale3d(1.1, 1.1, 1);
+        -moz-transform: scale3d(1.1, 1.1, 1);
+        -ms-transform: scale3d(1.1, 1.1, 1);
+        -o-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1); }
   .contact .resume {
     margin-top: 10vh;
     position: relative;

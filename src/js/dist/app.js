@@ -1,8 +1,9 @@
 // Global object of the Application ** Object ** app
 var App = function(){
     
-    this.window = $(window);
-   
+    // DOM
+    this.window = $(window);    
+    
 	// Empty object to stock our pages
 	this.pages = {};
 
@@ -51,29 +52,14 @@ App.prototype.onDatasLoaded = function() {
 
 	// Create router
 	this.router = new Router();
-
+    
 	// Create viewController
 	this.viewController = new ViewController();
     
-    this.resizer();
+    // Animation
+    this.animation = new Animation();
     
 };
-
-App.prototype.resizer = function(){
-    
-    console.log(this.window.width());
-    
-    if( this.window.width() >= 992 ){
-        
-        // Add Animation
-        this.animation = new Animation();
-        
-    }
-    
-    
-    
-    
-}
 var Animation = function(){
           
     $(document).ready(function() {
@@ -175,6 +161,59 @@ ViewController.prototype.pushViews = function(){
     }
     
 }
+var Contact = function(){
+    
+    this.id = 'contact';
+    
+    this.dataPath = app.datas[this.id];
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+Contact.prototype.init = function(){
+
+     this.template = templates.contact(this.dataPath);
+    
+}
+
+var Home = function(){
+    
+    this.id = 'home';
+    
+    this.dataPath = app.datas[this.id];
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+Home.prototype.init = function(){
+
+     this.template = templates.home(this.dataPath);
+    
+}
+
+var Work = function(name){
+    
+    this.id = 'work';
+    
+    this.dataPath = app.datas[this.id][name];
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+Work.prototype.init = function(){
+    
+     this.template = templates.work(this.dataPath);
+    
+}
 var Router = function(){
 
 	// Create navigate event
@@ -269,56 +308,3 @@ Router.prototype.getToken = function() {
 	}
 
 };
-var Contact = function(){
-    
-    this.id = 'contact';
-    
-    this.dataPath = app.datas[this.id];
-    
-    this.template = {};
-    
-    this.init();
-    
-}
-
-Contact.prototype.init = function(){
-
-     this.template = templates.contact(this.dataPath);
-    
-}
-
-var Home = function(){
-    
-    this.id = 'home';
-    
-    this.dataPath = app.datas[this.id];
-    
-    this.template = {};
-    
-    this.init();
-    
-}
-
-Home.prototype.init = function(){
-
-     this.template = templates.home(this.dataPath);
-    
-}
-
-var Work = function(name){
-    
-    this.id = 'work';
-    
-    this.dataPath = app.datas[this.id][name];
-    
-    this.template = {};
-    
-    this.init();
-    
-}
-
-Work.prototype.init = function(){
-    
-     this.template = templates.work(this.dataPath);
-    
-}

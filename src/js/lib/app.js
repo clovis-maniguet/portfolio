@@ -1,8 +1,9 @@
 // Global object of the Application ** Object ** app
 var App = function(){
     
-    this.window = $(window);
-   
+    // DOM
+    this.window = $(window);    
+    
 	// Empty object to stock our pages
 	this.pages = {};
 
@@ -51,26 +52,11 @@ App.prototype.onDatasLoaded = function() {
 
 	// Create router
 	this.router = new Router();
-
+    
 	// Create viewController
 	this.viewController = new ViewController();
     
-    this.resizer();
+    // Animation
+    this.animation = new Animation();
     
 };
-
-App.prototype.resizer = function(){
-    
-    console.log(this.window.width());
-    
-    if( this.window.width() >= 992 ){
-        
-        // Add Animation
-        this.animation = new Animation();
-        
-    }
-    
-    
-    
-    
-}

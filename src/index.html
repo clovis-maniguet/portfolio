@@ -17,9 +17,15 @@
     <![endif]-->
   </head>
   <body>
-    <div id="main">
-        
+    
+    <div id="loader">
+        <div class="spinner">
+            <div class="ball"></div>
+            <p>LOADING</p>
+        </div>
     </div>
+    
+    <div id="main"></div>
     <!-- Js -->
     <script src="js/dist/vendor.js"></script>
     <script src="js/dist/templates.js"></script>
@@ -31,9 +37,9 @@
         
         $(function(){
             
-            $(window).on('resize', function(){
+            $(window).on('load', function(e){
                 
-                app.resizer();
+                TweenLite.to($("#loader"), 1, {display: "none", top: "-100vh", delay: 1});
                 
             })
             

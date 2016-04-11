@@ -58,6 +58,7 @@ var Animation = function(){
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
+        
 });
    
 };

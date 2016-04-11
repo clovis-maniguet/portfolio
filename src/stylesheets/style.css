@@ -5929,7 +5929,7 @@ body {
     clear: both; }
 
 .home {
-  background: url("../img/homeBg.png") no-repeat center;
+  background: url("../img/homeBg.jpg") no-repeat center;
   -webkit-background-size: cover;
   -khtml-background-size: cover;
   -moz-background-size: cover;
@@ -6157,8 +6157,16 @@ body {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: center;
     margin-top: 15vh; }
+    @media (min-width: 768px) {
+      .contact .social .elmt {
+        float: left;
+        width: 25%; } }
     @media (min-width: 992px) {
       .contact .social .elmt {
         left: 16.66667%; } }

@@ -13,7 +13,9 @@
         .elmt{
             
             @include make-xs-column(6);
-        
+            
+            @include make-sm-column(3);
+            
             @include make-md-column-push(2);
             @include make-md-column(2);
             

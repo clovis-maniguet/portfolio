@@ -120,6 +120,7 @@ var Animation = function(){
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
+        
 });
    
 };
@@ -159,59 +160,6 @@ ViewController.prototype.pushViews = function(){
         $('#main').append(this.views[view].template);
        
     }
-    
-}
-var Contact = function(){
-    
-    this.id = 'contact';
-    
-    this.dataPath = app.datas[this.id];
-    
-    this.template = {};
-    
-    this.init();
-    
-}
-
-Contact.prototype.init = function(){
-
-     this.template = templates.contact(this.dataPath);
-    
-}
-
-var Home = function(){
-    
-    this.id = 'home';
-    
-    this.dataPath = app.datas[this.id];
-    
-    this.template = {};
-    
-    this.init();
-    
-}
-
-Home.prototype.init = function(){
-
-     this.template = templates.home(this.dataPath);
-    
-}
-
-var Work = function(name){
-    
-    this.id = 'work';
-    
-    this.dataPath = app.datas[this.id][name];
-    
-    this.template = {};
-    
-    this.init();
-    
-}
-
-Work.prototype.init = function(){
-    
-     this.template = templates.work(this.dataPath);
     
 }
 var Router = function(){
@@ -308,3 +256,56 @@ Router.prototype.getToken = function() {
 	}
 
 };
+var Contact = function(){
+    
+    this.id = 'contact';
+    
+    this.dataPath = app.datas[this.id];
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+Contact.prototype.init = function(){
+
+     this.template = templates.contact(this.dataPath);
+    
+}
+
+var Home = function(){
+    
+    this.id = 'home';
+    
+    this.dataPath = app.datas[this.id];
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+Home.prototype.init = function(){
+
+     this.template = templates.home(this.dataPath);
+    
+}
+
+var Work = function(name){
+    
+    this.id = 'work';
+    
+    this.dataPath = app.datas[this.id][name];
+    
+    this.template = {};
+    
+    this.init();
+    
+}
+
+Work.prototype.init = function(){
+    
+     this.template = templates.work(this.dataPath);
+    
+}
